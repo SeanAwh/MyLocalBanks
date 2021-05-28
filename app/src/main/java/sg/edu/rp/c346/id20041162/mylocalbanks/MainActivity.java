@@ -59,16 +59,16 @@ public class MainActivity extends AppCompatActivity {
         String bankWebsite = "";
         String bankPhone = "";
         if(bankSelected.equalsIgnoreCase("DBS")){
-            bankWebsite = "https://www.dbs.com.sg";
-            bankPhone = "tel:18001111111";
+            bankWebsite = getString(R.string.dbsURL);
+            bankPhone = getString(R.string.dbsTel);
         }
         else if(bankSelected.equalsIgnoreCase("OCBC")){
-            bankWebsite = "https://www.ocbc.com";
-            bankPhone = "tel:18003633333";
+            bankWebsite = getString(R.string.ocbcURL);
+            bankPhone = getString(R.string.ocbcTel);
         }
         else if(bankSelected.equalsIgnoreCase("UOB")){
-            bankWebsite = "https://www.uob.com.sg";
-            bankPhone = "tel:18002222121";
+            bankWebsite = getString(R.string.uobURL);
+            bankPhone = getString(R.string.uobTel);
         }
 
         if(item.getItemId()==0){
@@ -92,14 +92,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.EnglishSelection){
-            tvDBS.setText("DBS");
-            tvOCBC.setText("OCBC");
-            tvUOB.setText("UOB");
+            tvDBS.setText(getString(R.string.dbs));
+            tvOCBC.setText(getString(R.string.ocbc));
+            tvUOB.setText(getString(R.string.uob));
         }
         else if(id == R.id.ChineseSelection){
-            tvDBS.setText("星展银行");
-            tvOCBC.setText("华侨银行");
-            tvUOB.setText("大华银行");
+            tvDBS.setText(getString(R.string.dbsChi));
+            tvOCBC.setText(getString(R.string.ocbcChi));
+            tvUOB.setText(getString(R.string.uobChi));
         }
         return super.onOptionsItemSelected(item);
     }

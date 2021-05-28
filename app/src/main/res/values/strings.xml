@@ -3,4 +3,13 @@
     <string name="uob">UOB</string>
     <string name="ocbc">OCBC</string>
     <string name="dbs">DBS</string>
+    <string name="uobChi">大华银行</string>
+    <string name="ocbcChi">华侨银行</string>
+    <string name="dbsChi">星展银行</string>
+    <string name="dbsURL">https://www.dbs.com.sg</string>
+    <string name="ocbcURL">https://www.ocbc.com</string>
+    <string name="uobURL">https://www.uob.com.sg</string>
+    <string name="dbsTel">tel:18001111111</string>
+    <string name="ocbcTel">tel:18003633333</string>
+    <string name="uobTel">tel:18002222121</string>
 </resources>
