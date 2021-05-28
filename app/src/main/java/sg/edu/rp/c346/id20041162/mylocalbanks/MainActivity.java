@@ -11,10 +11,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnDbs, btnOcbc, btnUob;
+    ImageButton btnDbs, btnOcbc, btnUob;
+    TextView tvDBS, tvOCBC, tvUOB;
 
     String bankSelected = "";
     @Override
@@ -25,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         btnDbs = findViewById(R.id.btnDbs);
         btnOcbc = findViewById(R.id.btnOcbc);
         btnUob = findViewById(R.id.btnUob);
+
+        tvDBS = findViewById(R.id.textViewDBS);
+        tvOCBC = findViewById(R.id.textViewOCBC);
+        tvUOB = findViewById(R.id.textViewUOB);
 
         registerForContextMenu(btnDbs);
         registerForContextMenu(btnOcbc);
@@ -85,14 +92,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if(id == R.id.EnglishSelection){
-            btnDbs.setText("DBS");
-            btnOcbc.setText("OCBC");
-            btnUob.setText("UOB");
+            tvDBS.setText("DBS");
+            tvOCBC.setText("OCBC");
+            tvUOB.setText("UOB");
         }
         else if(id == R.id.ChineseSelection){
-            btnDbs.setText("星展银行");
-            btnOcbc.setText("华侨银行");
-            btnUob.setText("大华银行");
+            tvDBS.setText("星展银行");
+            tvOCBC.setText("华侨银行");
+            tvUOB.setText("大华银行");
         }
         return super.onOptionsItemSelected(item);
     }
